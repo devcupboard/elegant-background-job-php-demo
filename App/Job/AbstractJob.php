@@ -1,5 +1,5 @@
 <?php
-namespace App\Jobs;
+namespace App\Job;
 
 use Bernard\Message;
 

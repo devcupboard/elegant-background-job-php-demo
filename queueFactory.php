@@ -1,13 +1,13 @@
 <?php
-namespace App;
 
+use Bernard\Driver\PredisDriver;
 use Bernard\Normalizer\EnvelopeNormalizer;
-use Bernard\Normalizer\PlainMessageNormalizer;
+use Bernard\QueueFactory\PersistentFactory;
 use Bernard\Serializer;
 use Normalt\Normalizer\AggregateNormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Bernard\Driver\PredisDriver;
 use Predis\Client;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 $predis = new Client('tcp://localhost', array(
     'prefix' => 'bernard:',
@@ -19,7 +19,10 @@ return new PersistentFactory(
     new Serializer(
         new AggregateNormalizer([
             new EnvelopeNormalizer(),
-            new ObjectNormalizer(),
+            new Symfony\Component\Serializer\Serializer(
+                [new ObjectNormalizer()],
+                [new JsonEncoder()]
+            ),
         ])
 
     )

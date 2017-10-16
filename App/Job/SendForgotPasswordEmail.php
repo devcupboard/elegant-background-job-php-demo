@@ -1,7 +1,7 @@
 <?php
-namespace App\Jobs;
+namespace App\Job;
 
-use App\Mail;
+use App\User;
 
 class SendForgotPasswordEmail extends AbstractJob
 {
@@ -12,7 +12,7 @@ class SendForgotPasswordEmail extends AbstractJob
     $this->user = $user;
   }
   
-  public function getUser(): User
+  public function getUser()
   {
     return $this->user;
   }  

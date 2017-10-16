@@ -1,7 +1,7 @@
 <?php
 namespace App\Handler;
 
-use App\Job\SendForgotPassword;
+use App\Job\SendForgotPasswordEmail;
 use App\Mailer;
 
 class SendImportantEmailHandler
@@ -13,8 +13,8 @@ class SendImportantEmailHandler
     $this->mailer = $mailer;
   }
   
-  public function __invoke(SendForgotPassword $message)
+  public function __invoke(SendForgotPasswordEmail $message)
   {
-    $mailer->sendMail($message->getUser()->getEmail(), 'subject', 'contents');
+    $this->mailer->sendMail($message->getUser()->getEmail(), 'subject', 'contents');
   }
 }
