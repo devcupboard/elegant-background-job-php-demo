@@ -67,4 +67,4 @@ $eventDispatcher->addListener(
 
 // Create a Consumer and start the loop.
 $consumer = new Consumer($router, $eventDispatcher);
-$consumer->consume(new RoundRobinQueue($queues), ['stop-on-error' => true]);
+$consumer->consume(new RoundRobinQueue($queues));
