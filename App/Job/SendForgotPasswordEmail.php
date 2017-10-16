@@ -1,9 +1,9 @@
 <?php
-namespace App\Job;
+namespace App\Message;
 
 use App\User;
 
-class SendForgotPasswordEmail extends AbstractJob
+class SendForgotPasswordEmail extends AbstractMessage
 {
   private $user;
   

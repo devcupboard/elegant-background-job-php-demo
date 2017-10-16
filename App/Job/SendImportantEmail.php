@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Job;
+namespace App\Message;
 
-class SendImportantEmail extends AbstractJob
+class SendImportantEmail extends AbstractMessage
 {
 }

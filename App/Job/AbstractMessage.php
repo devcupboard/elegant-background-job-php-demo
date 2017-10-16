@@ -1,9 +1,9 @@
 <?php
-namespace App\Job;
+namespace App\Message;
 
 use Bernard\Message;
 
-abstract class AbstractJob implements Message
+abstract class AbstractMessage implements Message
 {  
   public function getName()
   {

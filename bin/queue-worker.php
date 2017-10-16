@@ -20,9 +20,9 @@ $queues = [
 ];
 
 $handlers = [
-    App\Job\SendForgotPasswordEmail::class 
+    App\Message\SendForgotPasswordEmail::class
         => App\Handler\SendForgotPasswordEmailHandler::class,
-    App\Job\SendImportantEmail::class 
+    App\Message\SendImportantEmail::class
         => App\Handler\SendImportantEmailHandler::class,
 ];
   

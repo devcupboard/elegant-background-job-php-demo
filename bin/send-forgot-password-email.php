@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\Job\SendForgotPasswordEmail;
+use App\Message\SendForgotPasswordEmail;
 use App\User;
 use Bernard\Producer;
 use Bernard\QueueFactory\PersistentFactory;

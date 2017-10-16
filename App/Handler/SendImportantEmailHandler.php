@@ -1,7 +1,7 @@
 <?php
 namespace App\Handler;
 
-use App\Job\SendForgotPasswordEmail;
+use App\Message\SendForgotPasswordEmail;
 use App\Mailer;
 
 class SendImportantEmailHandler
