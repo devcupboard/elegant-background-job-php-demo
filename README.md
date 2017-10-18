@@ -8,6 +8,7 @@ php bin/queue-worker.php
 ```
 
 ## To invoke sending message
+Open another terminal(or tab) and run:
 ```bash
 php bin/send-forgot-password-email.php
 ```
