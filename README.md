@@ -1,5 +1,5 @@
 # elegant-background-job-php-demo
-Demo code for a medium post
+Demo code for [Elegant background jobs in PHP](https://medium.com/devcupboard/elegant-background-jobs-in-php-c61b91bf582b).
 
 ## To run queue worker
 (forever running program)
